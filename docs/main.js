@@ -28,6 +28,10 @@ combineButton.addEventListener("click",()=>{
         elementsOwned.forEach(item=>{
             item.pushElement(oldElementsOwned.map(val=>val.name));
         })
+        //Alert the player on the new creations
+        if(res!=[]){
+            alert(`You have created ${res}`);
+        }
         //Updates the player progress
         localStorage.setItem("progress",JSON.stringify(elementsOwned));
     })
