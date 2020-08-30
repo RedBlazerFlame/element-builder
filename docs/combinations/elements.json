@@ -3,17 +3,21 @@
         {
             "name":"hydrogen",
             "type":"element",
-            "color":"blue",
-            "textColor":"white",
+            "color":"white",
+            "textColor":"black",
             "equation":"none"
         },
         {
             "name":"helium",
             "type":"element",
+            "color":"#FFFFAA",
+            "textColor":"black",
             "equation":"none"
         },
         {
             "name":"lithium",
+            "color":"#FFAABB",
+            "textColor":"black",
             "type":"element",
             "equation":"none"
         },
@@ -127,6 +131,13 @@
             "type":"compound",
             "equation":[
                 ["hydrogen","hydrogen","oxygen"]
+            ]
+        },
+        {
+            "name":"ozone",
+            "type":"compound",
+            "equation":[
+                [["oxygen",3]]
             ]
         },
         {
