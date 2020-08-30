@@ -1,0 +1,3 @@
+Hi! Post your development notes here:
+
+August 30, 2020: Initial Commit -RedBlazerFlame
