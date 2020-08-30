@@ -54,7 +54,7 @@ resetButton.addEventListener("click",()=>{
             if(confirm("Final Chance! Are you sure you want to RESET?")){
                 alert("Alright, don't say that I didn't warn you.");
                 localStorage.removeItem("progress");    //Bye Bye Progress
-                window.location.replace("/docs/");   //Redirect Time
+                window.location.replace("#top");   //Redirect Time
             }
         }
     }

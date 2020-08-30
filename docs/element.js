@@ -13,7 +13,7 @@ function Element(name,type="element",color="white",textColor="black"){
         domComponent.appendChild(textNode);
         domComponent.id=this.name;
         domComponent.classList="element";
-        domComponent.style.backgroundColor=this.color;
+        domComponent.style.background=this.color;
         domComponent.style.color=this.textColor;
         //Push the DOM component IF AND ONLY IF it hasn't been pushed previously
         if(!elements.includes(this.name.toLowerCase())){

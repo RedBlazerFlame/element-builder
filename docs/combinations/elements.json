@@ -29,16 +29,22 @@
         {
             "name":"boron",
             "type":"element",
+            "color":"#884400",
+            "textColor":"black",
             "equation":"none"
         },
         {
             "name":"carbon",
             "type":"element",
+            "color":"linear-gradient(135deg,#444444,#000000)",
+            "textColor":"white",
             "equation":"none"
         },
         {
             "name":"nitrogen",
             "type":"element",
+            "color":"#2244FF",
+            "textColor":"black",
             "equation":"none"
         },
         {
@@ -49,11 +55,15 @@
         {
             "name":"fluorine",
             "type":"element",
+            "color":"#FFFFAA",
+            "textColor":"black",
             "equation":"none"
         },
         {
             "name":"neon",
             "type":"element",
+            "color":"linear-gradient(90deg,cyan,yellow,magenta,cyan)",
+            "textColor":"black",
             "equation":"none"
         },
         {
@@ -74,6 +84,8 @@
         {
             "name":"silicon",
             "type":"element",
+            "color":"#000077",
+            "textColor":"white",
             "equation":"none"
         },
         {
@@ -99,6 +111,8 @@
         {
             "name":"potassium",
             "type":"element",
+            "color":"#FFFF22",
+            "textColor":"black",
             "equation":"none"
         },
         {
@@ -124,11 +138,15 @@
         {
             "name":"chromium",
             "type":"element",
+            "color":"linear-gradient(70deg,#FF5555 0%, #FF5555 25%, #FFFF55 25%,#FFFF55 50%,#55FF55 50%,#55FF55 75%,#5555FF 75%, #5555FF 100%)",
+            "textColor":"black",
             "equation":"none"
         },
         {
             "name":"water",
             "type":"compound",
+            "color":"linear-gradient(30deg,#55AAFF,#003388)",
+            "textColor":"white",
             "equation":[
                 ["hydrogen","hydrogen","oxygen"]
             ]
@@ -185,8 +203,81 @@
         {
             "name":"ruby",
             "type":"compound",
+            "color":"linear-gradient(45deg,#FF5555,#880000)",
+            "textColor":"black",
             "equation":[
                 [["aluminium",2],["oxygen",3],"chromium"],["aluminium oxide","chromium"]
+            ]
+        },
+        {
+            "name":"acetic acid",
+            "type":"compound",
+            "equation":[
+                [["carbon",2],["oxygen",2],["hydrogen",4]]
+            ]
+        },
+        {
+            "name":"trinitrotoluene",
+            "type":"compound",
+            "color":"linear-gradient(90deg,#FF5555 0%,#FF5555 33.33%,#AA0000 33.33%,#AA0000 66.67%,#FF5555 66.67%,#FF5555 100%)",
+            "textColor":"black",
+            "equation":[
+                [["carbon",7],["oxygen",6],["hydrogen",5],["nitrogen",3]]
+            ]
+        },
+        {
+            "name":"diamond",
+            "type":"compound",
+            "color":"linear-gradient(135deg,#FFFFFF,#008888)",
+            "textColor":"black",
+            "equation":[
+                ["carbon"]
+            ]
+        },
+        {
+            "name":"graphite",
+            "type":"compound",
+            "color":"linear-gradient(45deg,#444444,#000000)",
+            "textColor":"white",
+            "equation":[
+                ["carbon"]
+            ]
+        },
+        {
+            "name":"carbon nanotube",
+            "type":"compound",
+            "color":"linear-gradient(135deg,#444444,#000000)",
+            "textColor":"white",
+            "equation":[
+                ["carbon"]
+            ]
+        },
+        {
+            "name":"acetone",
+            "type":"compound",
+            "equation":[
+                [["carbon",3],["oxygen",1],["hydrogen",6]]
+            ]
+        },
+        {
+            "name":"fructose",
+            "type":"compound",
+            "equation":[
+                [["carbon",6],["oxygen",6],["hydrogen",12]]
+            ]
+        },
+        {
+            "name":"glucose",
+            "type":"compound",
+            "equation":[
+                [["carbon",6],["oxygen",6],["hydrogen",12]]
+            ]
+        },
+        {
+            "name":"lactose",
+            "type":"compound",
+            "equation":[
+                [["carbon",12],["oxygen",11],["hydrogen",22]]
             ]
         },
         {

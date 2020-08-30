@@ -1,18 +1,45 @@
+@keyframes moveFromTop{
+    from{top:-100vh;}
+    to{top:0;}
+}
+@keyframes moveFromLeft{
+    from{left:-100vh;}
+    to{left:0;}
+}
+@keyframes moveFromBottom{
+    from{bottom:-100vh;}
+    to{bottom:0;}
+}
+@keyframes moveFromRight{
+    from{right:-100vh;}
+    to{right:0;}
+}
+
 body{
     padding:0;
     margin:0;
     height:100vh;
     font-family:arial;
+    background:linear-gradient(45deg,#888888,#000000);
+    background-size:100% 200%;
 }
-body::-webkit-scrollbar{
+::-webkit-scrollbar{
     display:none;
 }
 main{
-    width:100%;
+    width:95%;
     padding:1vw;
     overflow:auto;
 }
+main:not(.equation):not(.equationControl):not(:hover){
+    filter:blur(0.05vw);
+    transition:filter 1s linear;
+}
+main:not(.equation):not(.equationControl):hover{
+    filter:blur(0);
+}
 main>div.element{
+    position:relative;
     display:inline-block;
     min-width:1vw;
     min-height:1vw;
@@ -29,14 +56,45 @@ main>div.element{
     font-size:1vw;
     font-weight:bold;
     text-transform: capitalize;
-
+    transform:scale(1);
+    transition:transform 1s ease-in-out 0s;
 }
+
+main:not(.equation)>div.element:nth-child(8n){
+    animation:moveFromTop 2s ease-out 0s 1;
+}
+main:not(.equation)>div.element:nth-child(8n+1){
+    animation:moveFromRight 2s ease-out 0s 1;
+}
+main:not(.equation)>div.element:nth-child(8n+2){
+    animation:moveFromBottom 2s ease-out 0s 1;
+}
+main:not(.equation)>div.element:nth-child(8n+3){
+    animation:moveFromLeft 2s ease-out 0s 1;
+}
+
+main:not(.equation)>div.element:nth-child(8n+4){
+    animation:moveFromTop 1s ease-out 0s 1;
+}
+main:not(.equation)>div.element:nth-child(8n+5){
+    animation:moveFromRight 1s ease-out 0s 1;
+}
+main:not(.equation)>div.element:nth-child(8n+6){
+    animation:moveFromBottom 1s ease-out 0s 1;
+}
+main:not(.equation)>div.element:nth-child(8n+7){
+    animation:moveFromLeft 1s ease-out 0s 1;
+}
+
 main>div.element:hover{
     border-bottom-color:rgba(255,255,255,0.5);
     border-left-color:rgba(0,0,0,0.35);
     border-top-color:rgba(0,0,0,0.5);
     border-right-color:rgba(255,255,255,0.35);
+    transform:scale(1.5) translateY(-1vh);
+    z-index:900;
 }
+
 main.elements{
     height:32vh;
     background-color:rgb(205,255,255);
