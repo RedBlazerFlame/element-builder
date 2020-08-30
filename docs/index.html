@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Element Builder</title>
+</head>
+<body>
+    <main id="equationControl" class="equationControl"><button class="combine" id="combine">Combine Elements</button><button class="clear" id="clear">Clear Elements in Equation</button></main>
+    <main id="equation" class="equation"><p class="label">Equation:</p></main>
+    <main id="element" class="elements"><p class="label">Elements:</p></main>
+    <main id="compound" class="compounds"><p class="label">Compounds:</p></main>
+    <main id="mixture" class="mixtures"><p class="label">Mixtures:</p></main>
+    <script src="element.js"></script>
+    <script src="fetchAllBasic.js"></script>
+    <script src="combine.js"></script>
+    <script defer src="main.js"></script>
+</body>
+</html>

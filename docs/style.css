@@ -1,0 +1,87 @@
+body{
+    padding:0;
+    margin:0;
+    height:100vh;
+    font-family:arial;
+}
+body::-webkit-scrollbar{
+    display:none;
+}
+main{
+    width:100%;
+    padding:1vw;
+    overflow:auto;
+}
+main>div.element{
+    display:inline-block;
+    min-width:1vw;
+    min-height:1vw;
+    padding:1vw;
+    margin:0.5vw;
+    background-color:white;
+    color:black;
+    border:0.5vw inset rgba(0,0,0,0.5);
+    border-top-color:rgba(255,255,255,0.5);
+    border-right-color:rgba(0,0,0,0.35);
+    border-bottom-color:rgba(0,0,0,0.5);
+    border-left-color:rgba(255,255,255,0.35);
+    border-radius:0.5vw;
+    font-size:1vw;
+    font-weight:bold;
+    text-transform: capitalize;
+
+}
+main>div.element:hover{
+    border-bottom-color:rgba(255,255,255,0.5);
+    border-left-color:rgba(0,0,0,0.35);
+    border-top-color:rgba(0,0,0,0.5);
+    border-right-color:rgba(255,255,255,0.35);
+}
+main.elements{
+    height:32vh;
+    background-color:rgb(205,255,255);
+}
+main.compounds{
+    height:27vh;
+    background-color:rgb(150,200,255);
+}
+main.mixtures{
+    height:22vh;
+    background-color:rgb(100,150,255);
+}
+main.equation{
+    height:32vh;
+    background-color:rgb(255,230,200);
+}
+main.equationControl{
+    height:10vh;
+    background-color:rgb(255,200,150);
+}
+main.equationControl>button{
+    display:inline-block;
+    min-width:1vw;
+    min-height:1vw;
+    padding:1vw;
+    margin:0.5vw;
+    background-color:gray;
+    color:white;
+    border:0.5vw inset rgba(0,0,0,0.5);
+    border-top-color:rgba(255,255,255,0.5);
+    border-right-color:rgba(0,0,0,0.35);
+    border-bottom-color:rgba(0,0,0,0.5);
+    border-left-color:rgba(255,255,255,0.35);
+    border-radius:0.5vw;
+    font-size:1vw;
+    font-weight:bold;
+    text-transform: capitalize;
+}
+main.equationControl>button:focus{
+    border-bottom-color:rgba(255,255,255,0.5);
+    border-left-color:rgba(0,0,0,0.35);
+    border-top-color:rgba(0,0,0,0.5);
+    border-right-color:rgba(255,255,255,0.35);
+}
+main>p.label{
+    font-weight:bold;
+    font-size:1.5vw;
+}
