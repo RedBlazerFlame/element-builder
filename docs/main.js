@@ -1,5 +1,5 @@
 //Get References to certain parts of the DOM
-var [combineButton,clearButton,equationBox]=["combine","clear","equation"].map(item=>document.getElementById(item));
+var [combineButton,clearButton,equationBox,resetButton]=["combine","clear","equation","reset"].map(item=>document.getElementById(item));
 var elementsOwned;
 //Gets the basic elements
 getBasic().then(result=>{
@@ -46,4 +46,16 @@ combineButton.addEventListener("click",()=>{
         //Updates the player progress
         localStorage.setItem("progress",JSON.stringify(elementsOwned));
     })
+})
+//Resets all Progress
+resetButton.addEventListener("click",()=>{
+    if(confirm("Are you sure that you want to reset ALL of your progress PERMANENTLY?")){
+        if(confirm("Really Sure?")){
+            if(confirm("Final Chance! Are you sure you want to RESET?")){
+                alert("Alright, don't say that I didn't warn you.");
+                localStorage.removeItem("progress");    //Bye Bye Progress
+                window.location.replace("/docs/");   //Redirect Time
+            }
+        }
+    }
 })
