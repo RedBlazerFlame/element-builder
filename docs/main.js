@@ -6,12 +6,15 @@ getBasic().then(result=>{
     //Get Save Data and Basic Elements and set that to the ElementsOwned Variable
     elementsOwned=[...(JSON.parse(localStorage.getItem("progress"))||[]).map(item=>new Element(item.name,item.type,item.color,item.textColor)),...result];
     //Remove Duplicates
-    elementsOwned=elementsOwned.filter((v,i,a)=>a.findIndex(t=>(JSON.stringify(t) === JSON.stringify(v)))===i);
+    elementsOwned=elementsOwned.filter((v,i,a)=>a.findIndex(t=>(t.name === v.name && t.type===v.type))===i);
     //Get All Elements
     getAll().then(elementCombinations=>{
         //Append all of the elements as paragraph elements
         elementsOwned.forEach(item=>{
             if(elementCombinations.map(val=>val.name.toLowerCase()).includes(item.name.toLowerCase())){
+                let elemIndex=elementCombinations.map(val=>val.name).indexOf(item.name)
+                item.color=elementCombinations[elemIndex].color;
+                item.textColor=elementCombinations[elemIndex].textColor;
                 item.pushElement(elementsOwned);
             }
         })
