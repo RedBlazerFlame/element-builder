@@ -4,7 +4,7 @@ var elementsOwned;
 //Gets the basic elements
 getBasic().then(result=>{
     //Get Save Data and Basic Elements and set that to the ElementsOwned Variable
-    elementsOwned=[...(JSON.parse(localStorage.getItem("progress"))||result).map(item=>new Element(item.name,item.type,item.color,item.textColor)),...result];
+    elementsOwned=[...(JSON.parse(localStorage.getItem("progress"))||[]).map(item=>new Element(item.name,item.type,item.color,item.textColor)),...result];
     //Remove Duplicates
     elementsOwned=elementsOwned.filter((v,i,a)=>a.findIndex(t=>(JSON.stringify(t) === JSON.stringify(v)))===i);
     //Append all of the elements as paragraph elements
