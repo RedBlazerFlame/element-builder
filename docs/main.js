@@ -30,7 +30,7 @@ combineButton.addEventListener("click",()=>{
         })
         //Alert the player on the new creations
         if(res!=[]){
-            alert(`You have created the following element(s): ${JSON.stringify(res)}`);
+            alert(`You have created the following element(s): ${res.map(item=>item.name)}`);
         }
         //Updates the player progress
         localStorage.setItem("progress",JSON.stringify(elementsOwned));
