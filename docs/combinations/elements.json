@@ -58,10 +58,76 @@
             "equation":"none"
         },
         {
+            "name":"magnesium",
+            "type":"element",
+            "equation":"none"
+        },
+        {
+            "name":"aluminum",
+            "type":"element",
+            "equation":"none"
+        },
+        {
+            "name":"silicon",
+            "type":"element",
+            "equation":"none"
+        },
+        {
+            "name":"phosphorus",
+            "type":"element",
+            "equation":"none"
+        },
+        {
+            "name":"sulfur",
+            "type":"element",
+            "equation":"none"
+        },
+        {
+            "name":"chlorine",
+            "type":"element",
+            "equation":"none"
+        },
+        {
+            "name":"argon",
+            "type":"element",
+            "equation":"none"
+        },
+        {
+            "name":"potassium",
+            "type":"element",
+            "equation":"none"
+        },
+        {
+            "name":"calcium",
+            "type":"element",
+            "equation":"none"
+        },
+        {
             "name":"water",
             "type":"compound",
             "equation":[
                 ["hydrogen","hydrogen","oxygen"]
+            ]
+        },
+        {
+            "name":"salt",
+            "type":"compound",
+            "equation":[
+                ["sodium","chlorine"]
+            ]
+        },
+        {
+            "name":"hydrogen peroxide",
+            "type":"compound",
+            "equation":[
+                ["hydrogen","hydrogen","oxygen","oxygen"]
+            ]
+        },
+        {
+            "name":"saltwater",
+            "type":"mixture",
+            "equation":[
+                ["salt","water"]
             ]
         }
     ]
