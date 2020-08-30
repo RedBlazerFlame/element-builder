@@ -63,7 +63,7 @@
             "equation":"none"
         },
         {
-            "name":"aluminum",
+            "name":"aluminium",
             "type":"element",
             "equation":"none"
         },
@@ -135,6 +135,20 @@
             "type":"compound",
             "equation":[
                 [["carbon",2],["hydrogen",5],"nitrogen","oxygen"]
+            ]
+        },
+        {
+            "name":"carbon dioxide",
+            "type":"compound",
+            "equation":[
+                ["carbon",["oxygen",2]]
+            ]
+        },
+        {
+            "name":"aluminium oxide",
+            "type":"compound",
+            "equation":[
+                [["aluminium",2],["oxygen",3]]
             ]
         },
         {
