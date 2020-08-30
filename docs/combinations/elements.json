@@ -131,6 +131,13 @@
             ]
         },
         {
+            "name":"acetamide",
+            "type":"compound",
+            "equation":[
+                [["carbon",2],["hydrogen",5],"nitrogen","oxygen"]
+            ]
+        },
+        {
             "name":"saltwater",
             "type":"mixture",
             "equation":[

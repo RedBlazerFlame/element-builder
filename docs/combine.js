@@ -12,7 +12,16 @@ async function combine(...elements){
     combinations.elements.forEach((currElem)=>{
         if(currElem.equation!="none"){
             currElem.equation.forEach((equation)=>{
-                if(JSON.stringify(elementNames)==JSON.stringify(equation.map((item4)=>item4.toLowerCase()).sort())){
+                let newEquation=equation.map((item4)=>{
+                    if(typeof(item4)==="string"){
+                        return item4;
+                    }else if(typeof(item4)=="object"){
+                        return [...Array(item4[1])].map(currElement=>item4[0]);
+                    }
+                });
+                let flatEquation=[].concat(...newEquation);
+                console.log(flatEquation);
+                if(JSON.stringify(elementNames)==JSON.stringify(flatEquation.map((item4)=>item4.toLowerCase()).sort())){
                     result.push(new Element(currElem.name,currElem.type,currElem.color,currElem.textColor));
                 }
             });
