@@ -7,8 +7,16 @@ getBasic().then(result=>{
     elementsOwned=[...(JSON.parse(localStorage.getItem("progress"))||[]).map(item=>new Element(item.name,item.type,item.color,item.textColor)),...result];
     //Remove Duplicates
     elementsOwned=elementsOwned.filter((v,i,a)=>a.findIndex(t=>(JSON.stringify(t) === JSON.stringify(v)))===i);
-    //Append all of the elements as paragraph elements
-    elementsOwned.forEach(item=>{item.pushElement(elementsOwned)})
+    //Get All Elements
+    getAll().then(elementCombinations=>{
+        //Append all of the elements as paragraph elements
+        elementsOwned.forEach(item=>{
+            if(elementCombinations.map(val=>val.name.toLowerCase()).includes(item.name.toLowerCase())){
+                item.pushElement(elementsOwned);
+            }
+        })
+    })
+    
 })
 //Clears the Equation Box
 clearButton.addEventListener("click",()=>{
