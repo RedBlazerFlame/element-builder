@@ -124,6 +124,13 @@
             ]
         },
         {
+            "name":"acetaldehyde",
+            "type":"compound",
+            "equation":[
+                ["carbon","carbon","hydrogen","hydrogen","hydrogen","hydrogen","oxygen"]
+            ]
+        },
+        {
             "name":"saltwater",
             "type":"mixture",
             "equation":[
