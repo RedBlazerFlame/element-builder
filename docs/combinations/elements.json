@@ -103,6 +103,26 @@
             "equation":"none"
         },
         {
+            "name":"scandium",
+            "type":"element",
+            "equation":"none"
+        },
+        {
+            "name":"titanium",
+            "type":"element",
+            "equation":"none"
+        },
+        {
+            "name":"vanadium",
+            "type":"element",
+            "equation":"none"
+        },
+        {
+            "name":"chromium",
+            "type":"element",
+            "equation":"none"
+        },
+        {
             "name":"water",
             "type":"compound",
             "equation":[
@@ -149,6 +169,13 @@
             "type":"compound",
             "equation":[
                 [["aluminium",2],["oxygen",3]]
+            ]
+        },
+        {
+            "name":"ruby",
+            "type":"compound",
+            "equation":[
+                [["aluminium",2],["oxygen",3],"chromium"],["aluminium oxide","chromium"]
             ]
         },
         {
