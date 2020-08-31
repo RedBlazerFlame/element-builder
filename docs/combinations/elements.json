@@ -458,6 +458,62 @@
                 [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",24]]
             ]
         },
+        
+        {
+            "name":"sodium bicarbonate",
+            "type":"compound",
+            "color":"hsla(180,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                ["sodium","hydrogen","carbon",["oxygen",3]]
+            ]
+        },
+        {
+            "name":"calcium carbonate",
+            "type":"compound",
+            "color":"hsla(180,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                ["calcium","carbon",["oxygen",3]]
+            ]
+        },
+        {
+            "name":"dry ice",
+            "type":"compound",
+            "color":"hsla(180,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                ["carbon",["oxygen",2]]
+            ]
+        },
+        {
+            "name":"magnesium sulphate",
+            "type":"compound",
+            "color":"hsla(180,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                ["magnesium","sulfur",["oxygen",4]]
+            ]
+        },
+        {
+            "name":"potassium hydroxide",
+            "type":"compound",
+            "color":"hsla(180,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                ["sodium","hydrogen","carbon",["oxygen",3]]
+            ]
+        },
+        {
+            "name":"gypsum",
+            "type":"compound",
+            "color":"hsla(180,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                ["calcium","sulfur",["oxygen",4],[[["hydrogen",2],"oxygen"],2]],
+                ["calcium","sulfur",["oxygen",4],["water",2]]
+            ]
+        },
 
         {
             "name":"silicon dioxide",
