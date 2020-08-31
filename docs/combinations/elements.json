@@ -460,6 +460,13 @@
         },
 
         {
+            "name":"silicon dioxide",
+            "type":"compound",
+            "equation":[
+                ["silicon",["oxygen",2]]
+            ]
+        },
+        {
             "name":"saltwater",
             "type":"mixture",
             "equation":[
