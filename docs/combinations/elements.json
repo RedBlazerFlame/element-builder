@@ -3,8 +3,8 @@
         {
             "name":"hydrogen",
             "type":"element",
-            "color":"white",
-            "textColor":"black",
+            "color":"red",
+            "textColor":"white",
             "equation":"none"
         },
         {
@@ -50,6 +50,8 @@
         {
             "name":"oxygen",
             "type":"element",
+            "color":"#AAFFAA",
+            "textColor":"black",
             "equation":"none"
         },
         {
@@ -280,6 +282,183 @@
                 [["carbon",12],["oxygen",11],["hydrogen",22]]
             ]
         },
+
+        {
+            "name":"adenine",
+            "type":"compound",
+            "color":"#FF5555",
+            "textColor":"white",
+            "equation":[
+                [["carbon",5],["nitrogen",5],["hydrogen",5]]
+            ]
+        },
+        {
+            "name":"cytosine",
+            "type":"compound",
+            "color":"#55FF55",
+            "textColor":"white",
+            "equation":[
+                [["carbon",4],["hydrogen",5],["nitrogen",3],"oxygen"]
+            ]
+        },
+        {
+            "name":"guanine",
+            "type":"compound",
+            "color":"#5555FF",
+            "textColor":"white",
+            "equation":[
+                [["carbon",5],["hydrogen",5],["nitrogen",5],"oxygen"]
+            ]
+        },
+        {
+            "name":"thymine",
+            "type":"compound",
+            "color":"#FFFF55",
+            "textColor":"white",
+            "equation":[
+                [["carbon",5],["hydrogen",6],["nitrogen",2],["oxygen",2]]
+            ]
+        },
+        {
+            "name":"uracil",
+            "type":"compound",
+            "color":"#FFAA55",
+            "textColor":"white",
+            "equation":[
+                [["carbon",4],["hydrogen",4],["nitrogen",2],["oxygen",2]]
+            ]
+        },
+
+        {
+            "name":"DNA",
+            "type":"compound",
+            "color":"linear-gradient(90deg,#FF5555,#5555FF,#FFFF55,#55FF55,#FF5555)",
+            "textColor":"white",
+            "equation":[
+                ["adenine","cytosine","guanine","thymine"]
+            ]
+        },
+        {
+            "name":"RNA",
+            "type":"compound",
+            "color":"linear-gradient(90deg,#FF5555,#5555FF,#FFAA55,#55FF55,#FF5555)",
+            "textColor":"white",
+            "equation":[
+                ["adenine","cytosine","guanine","uracil"]
+            ]
+        },
+
+        {
+            "name":"methylene",
+            "type":"compound",
+            "color":"linear-gradient(45deg,#FFFFFF,#000000,#FFFFFF)",
+            "textColor":"lime",
+            "equation":[
+                ["carbon",["hydrogen",2]]
+            ]
+        },
+
+        {
+            "name":"caprylic acid",
+            "type":"compound",
+            "color":"hsla(0,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],6]],
+                [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",6]]
+            ]
+        },
+        {
+            "name":"capric acid",
+            "type":"compound",
+            "color":"hsla(20,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],8]],
+                [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",8]]
+            ]
+        },
+        {
+            "name":"lauric acid",
+            "type":"compound",
+            "color":"hsla(40,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],10]],
+                [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",10]]
+            ]
+        },
+        {
+            "name":"myristic acid",
+            "type":"compound",
+            "color":"hsla(60,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],12]],
+                [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",12]]
+            ]
+        },
+        {
+            "name":"palmitic acid",
+            "type":"compound",
+            "color":"hsla(80,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],14]],
+                [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",14]]
+            ]
+        },
+        {
+            "name":"stearic acid",
+            "type":"compound",
+            "color":"hsla(100,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],16]],
+                [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",16]]
+            ]
+        },
+        {
+            "name":"arachidic acid",
+            "type":"compound",
+            "color":"hsla(120,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],18]],
+                [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",18]]
+            ]
+        },
+        {
+            "name":"behenic acid",
+            "type":"compound",
+            "color":"hsla(140,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],20]],
+                [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",20]]
+            ]
+        },
+        {
+            "name":"lignoceric acid",
+            "type":"compound",
+            "color":"hsla(160,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],22]],
+                [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",22]]
+            ]
+        },
+        {
+            "name":"cerotic acid",
+            "type":"compound",
+            "color":"hsla(180,50%,75%,1)",
+            "textColor":"white",
+            "equation":[
+                [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],24]],
+                [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",24]]
+            ]
+        },
+
         {
             "name":"saltwater",
             "type":"mixture",

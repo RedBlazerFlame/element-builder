@@ -1,6 +1,6 @@
 //Get References to certain parts of the DOM
 var [combineButton,clearButton,equationBox,resetButton]=["combine","clear","equation","reset"].map(item=>document.getElementById(item));
-var elementsOwned;
+var elementsOwned,allElements=[];
 //Gets the basic elements
 getBasic().then(result=>{
     //Get Save Data and Basic Elements and set that to the ElementsOwned Variable
@@ -13,14 +13,19 @@ getBasic().then(result=>{
         elementsOwned.forEach(item=>{
             if(elementCombinations.map(val=>val.name.toLowerCase()).includes(item.name.toLowerCase())){
                 let elemIndex=elementCombinations.map(val=>val.name).indexOf(item.name)
-                item.color=elementCombinations[elemIndex].color;
-                item.textColor=elementCombinations[elemIndex].textColor;
+                item.color=elementCombinations[elemIndex].color||"linear-gradient(120deg,#FFFFFF,#DDDDDD)";
+                item.textColor=elementCombinations[elemIndex].textColor||"black";
                 item.pushElement(elementsOwned);
             }
         })
     })
     
 })
+ //Get All Elements
+ getAll().then(elementCombinations=>{
+    //Get a copy of all the elements
+    allElements=elementCombinations;
+    })
 //Clears the Equation Box
 clearButton.addEventListener("click",()=>{
     equationBox.innerHTML="<p class=\"label\">Equation:</p>";
@@ -34,10 +39,12 @@ combineButton.addEventListener("click",()=>{
         //Combines the result with the current elements
         let oldElementsOwned=elementsOwned;
         elementsOwned=[...elementsOwned,...res];
-        elementsOwned=elementsOwned.filter((v,i,a)=>a.findIndex(t=>(JSON.stringify(t) === JSON.stringify(v)))===i);
+        elementsOwned=elementsOwned.filter((v,i,a)=>a.findIndex(t=>(t.name === v.name && t.type === v.type))===i);
         //Displays the elements to the screen as HTML elements
         elementsOwned.forEach(item=>{
-            item.pushElement(oldElementsOwned.map(val=>val.name));
+            if(allElements.map(val=>val.name).includes(item.name)){
+                item.pushElement(oldElementsOwned.map(val=>val.name));
+            }
         })
         //Alert the player on the new creations
         if(res!=[]){
@@ -54,7 +61,7 @@ resetButton.addEventListener("click",()=>{
             if(confirm("Final Chance! Are you sure you want to RESET?")){
                 alert("Alright, don't say that I didn't warn you.");
                 localStorage.removeItem("progress");    //Bye Bye Progress
-                window.location.replace("#top");   //Redirect Time
+                window.location.replace("#top");   //It's Rewind Time
             }
         }
     }
