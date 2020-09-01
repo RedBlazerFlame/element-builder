@@ -45,12 +45,60 @@ The five properties can be summarized as follows:
   <tr><td><b>TextColor</b></td><td style="background-color:#55FF55;">Yes</td><td>String (Representing the CSS "color" property of the element)</td><td style="background-color:#FF5555;">No</td></tr>
   <tr><td><b>Equation</b></td><td style="background-color:#55FF55;">Yes</td><td>Array or String*</td><td style="background-color:#55FF55;">Yes</td></tr>
 </table>
-&ast;-Specifically, the string literal "none" , which means that the element becomes a "basic" element(the player starts off with it)
+&ast;-Specifically, the string literal "none" , which means that the element becomes a "basic" element(the player starts off with it). **Setting the equation property to "none" will make it a basic element (An element which you start with)**.
 
-#### Properties - Name
-The name of the element as a string. Note that this is a case-sensitive property(which means that "dna" is different from "DNA" and "dNa").
+#### Properties - name
+The name of the element as a string. Note that this is a case-sensitive property(which means that "dna" is different from "DNA" and "dNa"). This is **required**.
 
+##### Name Examples
+* `"name":"aluminium" //Element with the name "Aluminium"`
+* `"name":"chromium"`
+* `"name":"silicon dioxide"`
+* `"name":"eukaryotic cell"`
 
+#### Properties  -  type
+The type of the element as a string. Note that this is a case-sensitive property. This is **required**.
+
+As of now, there are three possible values for this:
+* `"type":"element" //Element of type "element"`
+* `"type":"compound" //Element of type "compound"`
+* `"type":"mixture" //Element of type "mixture"`
+
+Again, `"type":"Element"` is invalid as the E in element is capitalized (The type property should all be in no-caps. Note that there's nothing stopping you from making a category with capitalized letters, but I recommend using small letters, especially because the current code cannot work with capitalized letters.)
+
+#### Properties - color
+The **BACKGROUND** color of the element as a string containing the CSS background property of the element's DOMElement object. This is case sensitive (because CSS is case-sensitive). This is **not required**.
+
+The value can be a:
+* String with the Name of the Color
+* String with `RGB()`, `RGBA()`, `HSL()`, or `HSLA()`
+* A String containing Hexadecimal
+* A `linear-gradient()` or `radial-gradient()`
+* A `url()` linking to an image
+* Or anything supported by the CSS background property
+
+##### Color Examples
+* `"color":"red" //Red Background`
+* `"color":"#FFAABB" //Pink Background`
+* `"color":"linear-gradient(135deg,#444444,#000000)" //Gradient starting from the top-left, fading from dark gray to black`
+* `"color":"linear-gradient(90deg,hsl(0,50%,75%,1) 0%,hsl(40,50%,75%,1) 11.1%,hsl(80,50%,75%,1) 22.2%,hsl(120,50%,75%,1) 33.3%,hsl(160,50%,75%,1) 44.4%,hsl(200,50%,75%,1) 55.6%,hsl(240,50%,75%,1) 66.7%,hsl(280,50%,75%,1) 77.8%,hsl(320,50%,75%,1) 88.9%,hsl(360,50%,75%,1) 100%)" //Pastel Rainbow Gradient starting from the left`
+
+#### Properties - textColor
+The **TEXT** color of the element as a string containing the CSS color property of the element's DOMElement object. This is case sensitive (because CSS is case-sensitive). This is **not required**.
+
+This value can be a:
+* String with the Name of the Color
+* String with `RGB()`, `RGBA()`, `HSL()`, or `HSLA()`
+* or a String containing Hexadecimal
+
+It **CANNOT** be a:
+* A `linear-gradient()` or `radial-gradient()`
+* A `url()` linking to an image
+* Or anything **NOT** supported by the CSS color property
+
+##### TextColor Examples
+* `"textColor":"red" //Red Text`
+* `"textColor":"#FFAABB" //Pink Text`
 
 #### Example 1 - Carbon Dioxide
 ```JavaScript
