@@ -37,7 +37,7 @@ The structure of the Element Object is as follows:
             }
 ```
 
-#### Example - Carbon Dioxide
+#### Example 1 - Carbon Dioxide
 ```JavaScript
             {
               "name":"carbon dioxide",
@@ -47,3 +47,9 @@ The structure of the Element Object is as follows:
               ]
             }
 ```
+
+In this example, we have an element called *"Carbon Dioxide"*, which is of the type *"compound"*.
+There is only one element in the "equation" array, which means that there is only one way to make Carbon Dioxide, which is using one "carbon" and two "oxygen".
+
+Note that `[item,N]` represents N copies of `item`. Here, item can be a string containing the name of the element or an array containing a pattern to repeat.
+So, 2H<sub>2</sub>O can be written as `[["oxygen",["hydrogen",2]],2]`
