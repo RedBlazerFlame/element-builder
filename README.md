@@ -5,7 +5,7 @@ A game built on HTML, CSS, and JavaScript where you start with the elements in t
 This project was started by RedBlazerFlame. RedBlazerFlame needed to study chemistry in a way that is fun for them, so RedBlazerFlame decided to make element-builder. It's written in HTML, CSS, and JavaScript (because RedBlazerFlame has the most experience there).
 
 ## How It Works
-Basically, there is an `elements.json` file, which stores all the elements and their properties and blueprint(the equation used to make it). Elements.json is **Case-Sensetive**.
+Basically, there is an `elements.json` file, which stores all the elements and their properties and blueprint(the equation used to make it). Elements.json is **Case-Sensetive**, which includes the element names and the element types.
 
 ### Elements.json Structure
 The structure of the `elements.json` is as follows:
@@ -33,7 +33,7 @@ The structure of the Element Object is as follows:
               "type":/*The type of the element, as a String(ex. "element","compound","mixture",etc...)*/,
               "color":/*OPTIONAL: The background color of the element, as a String (supports linear-gradient() and radial-gradient())*/,
               "textColor":/*OPTIONAL: The text color of the element, as a String (does not support linear-gradient() or radial-gradient()*/,
-              "equation":/*An array of arrays containing all possible equations*/
+              "equation":/*An array of arrays containing all possible equations OR the string "none" (which represents a basic element, which the user starts with)*/
             }
 ```
 
