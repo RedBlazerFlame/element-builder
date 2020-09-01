@@ -6,7 +6,7 @@ async function combine(...elements){
     //Creates a New Array with the names of the Elements (Sorted Alphabetically)
     let elementNames=[];
     elements.forEach(value=>{elementNames.push(value.name)});
-    elementNames=elementNames.map(item3=>item3.toLowerCase()).sort();
+    elementNames=elementNames.sort();
     //Checks if the equations match
     let result=[];
     combinations.elements.forEach((currElem)=>{
@@ -34,9 +34,9 @@ async function combine(...elements){
                     });
                     flatEquation=[].concat(...flatEquation);
                 }
-                console.log(flatEquation)
+                //console.log(flatEquation)
                 //flatEquation.forEach(itemin=>console.log(itemin));
-                if(JSON.stringify(elementNames)==JSON.stringify(flatEquation.map(item4=>item4.toLowerCase()).sort())){
+                if(JSON.stringify(elementNames)==JSON.stringify(flatEquation.sort())){
                     result.push(new Element(currElem.name,currElem.type,currElem.color,currElem.textColor));
                 }
             });

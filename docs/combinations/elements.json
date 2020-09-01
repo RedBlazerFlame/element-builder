@@ -362,7 +362,7 @@
             "name":"caprylic acid",
             "type":"compound",
             "color":"hsla(0,50%,75%,1)",
-            "textColor":"white",
+            "textColor":"rgba(0,0,0,0.75)",
             "equation":[
                 [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],6]],
                 [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",6]]
@@ -372,7 +372,7 @@
             "name":"capric acid",
             "type":"compound",
             "color":"hsla(20,50%,75%,1)",
-            "textColor":"white",
+            "textColor":"rgba(0,0,0,0.75)",
             "equation":[
                 [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],8]],
                 [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",8]]
@@ -382,7 +382,7 @@
             "name":"lauric acid",
             "type":"compound",
             "color":"hsla(40,50%,75%,1)",
-            "textColor":"white",
+            "textColor":"rgba(0,0,0,0.75)",
             "equation":[
                 [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],10]],
                 [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",10]]
@@ -392,7 +392,7 @@
             "name":"myristic acid",
             "type":"compound",
             "color":"hsla(60,50%,75%,1)",
-            "textColor":"white",
+            "textColor":"rgba(0,0,0,0.75)",
             "equation":[
                 [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],12]],
                 [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",12]]
@@ -402,7 +402,7 @@
             "name":"palmitic acid",
             "type":"compound",
             "color":"hsla(80,50%,75%,1)",
-            "textColor":"white",
+            "textColor":"rgba(0,0,0,0.75)",
             "equation":[
                 [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],14]],
                 [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",14]]
@@ -412,7 +412,7 @@
             "name":"stearic acid",
             "type":"compound",
             "color":"hsla(100,50%,75%,1)",
-            "textColor":"white",
+            "textColor":"rgba(0,0,0,0.75)",
             "equation":[
                 [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],16]],
                 [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",16]]
@@ -422,7 +422,7 @@
             "name":"arachidic acid",
             "type":"compound",
             "color":"hsla(120,50%,75%,1)",
-            "textColor":"white",
+            "textColor":"rgba(0,0,0,0.75)",
             "equation":[
                 [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],18]],
                 [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",18]]
@@ -432,7 +432,7 @@
             "name":"behenic acid",
             "type":"compound",
             "color":"hsla(140,50%,75%,1)",
-            "textColor":"white",
+            "textColor":"rgba(0,0,0,0.75)",
             "equation":[
                 [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],20]],
                 [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",20]]
@@ -442,7 +442,7 @@
             "name":"lignoceric acid",
             "type":"compound",
             "color":"hsla(160,50%,75%,1)",
-            "textColor":"white",
+            "textColor":"rgba(0,0,0,0.75)",
             "equation":[
                 [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],22]],
                 [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",22]]
@@ -452,18 +452,28 @@
             "name":"cerotic acid",
             "type":"compound",
             "color":"hsla(180,50%,75%,1)",
-            "textColor":"white",
+            "textColor":"rgba(0,0,0,0.75)",
             "equation":[
                 [["carbon",2],["hydrogen",4],["oxygen",2],[["carbon",["hydrogen",2]],24]],
                 [["carbon",2],["hydrogen",4],["oxygen",2],["methylene",24]]
+            ]
+        },
+
+        {
+            "name":"saturated fatty acid",
+            "type":"compound",
+            "color":"linear-gradient(90deg,hsl(0,50%,75%,1) 0%,hsl(40,50%,75%,1) 11.1%,hsl(80,50%,75%,1) 22.2%,hsl(120,50%,75%,1) 33.3%,hsl(160,50%,75%,1) 44.4%,hsl(200,50%,75%,1) 55.6%,hsl(240,50%,75%,1) 66.7%,hsl(280,50%,75%,1) 77.8%,hsl(320,50%,75%,1) 88.9%,hsl(360,50%,75%,1) 100%)",
+            "textColor":"rgba(0,0,0,0.75)",
+            "equation":[
+                ["capric acid","lauric acid","myristic acid","palmitic acid","stearic acid","arachidic acid","behenic acid","lignoceric acid","cerotic acid"]
             ]
         },
         
         {
             "name":"sodium bicarbonate",
             "type":"compound",
-            "color":"hsla(180,50%,75%,1)",
-            "textColor":"white",
+            "color":"white",
+            "textColor":"black",
             "equation":[
                 ["sodium","hydrogen","carbon",["oxygen",3]]
             ]
@@ -471,7 +481,7 @@
         {
             "name":"calcium carbonate",
             "type":"compound",
-            "color":"hsla(180,50%,75%,1)",
+            "color":"hsla(180,50%,50%,1)",
             "textColor":"white",
             "equation":[
                 ["calcium","carbon",["oxygen",3]]
@@ -480,8 +490,8 @@
         {
             "name":"dry ice",
             "type":"compound",
-            "color":"hsla(180,50%,75%,1)",
-            "textColor":"white",
+            "color":"hsla(180,50%,80%,1)",
+            "textColor":"black",
             "equation":[
                 ["carbon",["oxygen",2]]
             ]
@@ -489,7 +499,7 @@
         {
             "name":"magnesium sulphate",
             "type":"compound",
-            "color":"hsla(180,50%,75%,1)",
+            "color":"linear-gradient(135deg,#AAFFFF 0%, #00FFFF 50%, #004444 100%)",
             "textColor":"white",
             "equation":[
                 ["magnesium","sulfur",["oxygen",4]]
@@ -498,16 +508,17 @@
         {
             "name":"potassium hydroxide",
             "type":"compound",
-            "color":"hsla(180,50%,75%,1)",
-            "textColor":"white",
+            "color":"yellow",
+            "textColor":"black",
             "equation":[
-                ["sodium","hydrogen","carbon",["oxygen",3]]
+                ["sodium","hydrogen","carbon",["oxygen",3]],
+                ["potassium","oxygen","hydrogen"]
             ]
         },
         {
             "name":"gypsum",
             "type":"compound",
-            "color":"hsla(180,50%,75%,1)",
+            "color":"#008800",
             "textColor":"white",
             "equation":[
                 ["calcium","sulfur",["oxygen",4],[[["hydrogen",2],"oxygen"],2]],
@@ -518,10 +529,74 @@
         {
             "name":"silicon dioxide",
             "type":"compound",
+            "color":"#3388FF",
+            "textColor":"white",
             "equation":[
                 ["silicon",["oxygen",2]]
             ]
         },
+
+        {
+            "name":"myristoleic acid",
+            "type":"compound",
+            "color":"hsla(0,50%,25%,1)",
+            "textColor":"rgba(255,255,255,0.75)",
+            "equation":[
+                [ ["carbon",2],["hydrogen",4],[["carbon",["hydrogen",2]],3] , ["carbon",2],["hydrogen",2],["oxygen",2],[["carbon",["hydrogen",2]],7] ],
+                [ ["carbon",2],["hydrogen",4],["methylene",3] , ["carbon",2],["hydrogen",2],["oxygen",2],["methylene",7] ]
+            ]
+        },
+        {
+            "name":"palmitoleic acid",
+            "type":"compound",
+            "color":"hsla(20,50%,25%,1)",
+            "textColor":"rgba(255,255,255,0.75)",
+            "equation":[
+                [ ["carbon",2],["hydrogen",4],[["carbon",["hydrogen",2]],5] , ["carbon",2],["hydrogen",2],["oxygen",2],[["carbon",["hydrogen",2]],7] ],
+                [ ["carbon",2],["hydrogen",4],["methylene",5] , ["carbon",2],["hydrogen",2],["oxygen",2],["methylene",7] ]
+            ]
+        },
+        {
+            "name":"sapienic acid",
+            "type":"compound",
+            "color":"hsla(40,50%,25%,1)",
+            "textColor":"rgba(255,255,255,0.75)",
+            "equation":[
+                [ ["carbon",2],["hydrogen",4],[["carbon",["hydrogen",2]],8] , ["carbon",2],["hydrogen",2],["oxygen",2],[["carbon",["hydrogen",2]],4] ],
+                [ ["carbon",2],["hydrogen",4],["methylene",8] , ["carbon",2],["hydrogen",2],["oxygen",2],["methylene",4] ]
+            ]
+        },
+        {
+            "name":"oleic acid",
+            "type":"compound",
+            "color":"hsla(60,50%,25%,1)",
+            "textColor":"rgba(255,255,255,0.75)",
+            "equation":[
+                [ ["carbon",2],["hydrogen",4],[["carbon",["hydrogen",2]],7] , ["carbon",2],["hydrogen",2],["oxygen",2],[["carbon",["hydrogen",2]],7] ],
+                [ ["carbon",2],["hydrogen",4],["methylene",7] , ["carbon",2],["hydrogen",2],["oxygen",2],["methylene",7] ]
+            ]
+        },
+        {
+            "name":"elaidic acid",
+            "type":"compound",
+            "color":"hsla(80,50%,25%,1)",
+            "textColor":"rgba(255,255,255,0.75)",
+            "equation":[
+                [ ["carbon",2],["hydrogen",4],[["carbon",["hydrogen",2]],7] , ["carbon",2],["hydrogen",2],["oxygen",2],[["carbon",["hydrogen",2]],7] ],
+                [ ["carbon",2],["hydrogen",4],["methylene",7] , ["carbon",2],["hydrogen",2],["oxygen",2],["methylene",7] ]
+            ]
+        },
+        {
+            "name":"vaccenic acid",
+            "type":"compound",
+            "color":"hsla(100,50%,25%,1)",
+            "textColor":"rgba(255,255,255,0.75)",
+            "equation":[
+                [ ["carbon",2],["hydrogen",4],[["carbon",["hydrogen",2]],5] , ["carbon",2],["hydrogen",2],["oxygen",2],[["carbon",["hydrogen",2]],9] ],
+                [ ["carbon",2],["hydrogen",4],["methylene",5] , ["carbon",2],["hydrogen",2],["oxygen",2],["methylene",9] ]
+            ]
+        },
+
         {
             "name":"saltwater",
             "type":"mixture",

@@ -30,13 +30,14 @@ main{
     width:95%;
     padding:1vw;
     overflow:auto;
+    transition:filter 0.25s linear;
 }
-main:not(.equation):not(.equationControl):not(:hover){
-    filter:blur(0.05vw);
-    transition:filter 1s linear;
+main:not(.equation):not(:hover){
+    filter:brightness(100%) saturate(0%) blur(0.1vw);
+    transition:filter 0.25s linear;
 }
-main:not(.equation):not(.equationControl):hover{
-    filter:blur(0);
+main:not(.equation):hover{
+    filter:brightness(110%) saturate(100%);
 }
 main>div.element{
     position:relative;
@@ -57,7 +58,8 @@ main>div.element{
     font-weight:bold;
     text-transform: capitalize;
     transform:scale(1);
-    transition:transform 1s ease-in-out 0s;
+    transition:transform 1s ease-in-out 0s,box-shadow 1s ease-in-out 0s;
+    box-shadow: 1vw 1vh 1vw black;
 }
 
 main:not(.equation)>div.element:nth-child(8n){
@@ -93,6 +95,7 @@ main>div.element:hover{
     border-right-color:rgba(255,255,255,0.35);
     transform:scale(1.5) translateY(-1vh);
     z-index:900;
+    box-shadow: 2vw 2vh 2vw black;
 }
 
 main.elements{

@@ -6,15 +6,15 @@ getBasic().then(result=>{
     //Get Save Data and Basic Elements and set that to the ElementsOwned Variable
     elementsOwned=[...(JSON.parse(localStorage.getItem("progress"))||[]).map(item=>new Element(item.name,item.type,item.color,item.textColor)),...result];
     //Remove Duplicates
-    elementsOwned=elementsOwned.filter((v,i,a)=>a.findIndex(t=>(t.name === v.name && t.type===v.type))===i);
+    elementsOwned=elementsOwned.filter((v,i,a)=>a.findIndex(t=>(t.name.toLowerCase() === v.name.toLowerCase() && t.type === v.type))===i);
     //Get All Elements
     getAll().then(elementCombinations=>{
         //Append all of the elements as paragraph elements
-        elementsOwned.forEach(item=>{
-            if(elementCombinations.map(val=>val.name.toLowerCase()).includes(item.name.toLowerCase())){
-                let elemIndex=elementCombinations.map(val=>val.name).indexOf(item.name)
-                item.color=elementCombinations[elemIndex].color||"linear-gradient(120deg,#FFFFFF,#DDDDDD)";
-                item.textColor=elementCombinations[elemIndex].textColor||"black";
+        elementsOwned.forEach((item)=>{
+            if(elementCombinations.map(val=>val.name).includes(item.name)){
+                let elemIndex=elementCombinations.map(val=>val.name).indexOf(item.name);
+                item.color=(elemIndex!=-1?elementCombinations[elemIndex].color:"linear-gradient(120deg,#FFFFFF,#DDDDDD)");
+                item.textColor=(elemIndex!=-1?elementCombinations[elemIndex].textColor:"black");
                 item.pushElement(elementsOwned);
             }
         })
@@ -39,15 +39,16 @@ combineButton.addEventListener("click",()=>{
         //Combines the result with the current elements
         let oldElementsOwned=elementsOwned;
         elementsOwned=[...elementsOwned,...res];
-        elementsOwned=elementsOwned.filter((v,i,a)=>a.findIndex(t=>(t.name === v.name && t.type === v.type))===i);
+        elementsOwned=elementsOwned.filter((v,i,a)=>a.findIndex(t=>(t.name.toLowerCase() === v.name.toLowerCase() && t.type === v.type))===i);
         //Displays the elements to the screen as HTML elements
+        console.log(elementsOwned);
         elementsOwned.forEach(item=>{
-            if(allElements.map(val=>val.name).includes(item.name)){
+            if(allElements.map(val=>val.name).includes(item.name) && !oldElementsOwned.map(val=>val.name).includes(item.name)){
                 item.pushElement(oldElementsOwned.map(val=>val.name));
             }
         })
         //Alert the player on the new creations
-        if(res!=[]){
+        if(res.length>0){
             alert(`You have created the following element(s): ${res.map(item=>item.name)}`);
         }
         //Updates the player progress
