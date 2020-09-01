@@ -5,7 +5,7 @@ A game built on HTML, CSS, and JavaScript where you start with the elements in t
 This project was started by RedBlazerFlame. RedBlazerFlame needed to study chemistry in a way that is fun for them, so RedBlazerFlame decided to make element-builder. It's written in HTML, CSS, and JavaScript (because RedBlazerFlame has the most experience there).
 
 ## How It Works
-Basically, there is an `elements.json` file, which stores all the elements and their properties and blueprint(the equation used to make it). Elements.json is **Case-Sensetive**, which includes the element names and the element types.
+Basically, there is an `elements.json` file, which stores all the elements (where element refers to "elements","compounds", and "mixtures") and their properties and blueprint(the equation used to make it). Elements.json is **Case-Sensitive**, which includes the element names and the element types.
 
 ### Elements.json Structure
 The structure of the `elements.json` is as follows:
@@ -36,6 +36,21 @@ The structure of the Element Object is as follows:
               "equation":/*An array of arrays containing all possible equations OR the string "none" (which represents a basic element, which the user starts with)*/
             }
 ```
+The five properties can be summarized as follows:
+<table>
+  <tr><th><b>Element Name</b></th><th>Case-Sensitive</th><th>Value Type Accepted</th><th>Required</th></tr>
+  <tr><td><b>Name</b></td><td style="background-color:#55FF55;">Yes</td><td>String</td><td style="background-color:#55FF55;">Yes</td></tr>
+  <tr><td><b>Type</b></td><td style="background-color:#55FF55;">Yes</td><td>String</td><td style="background-color:#55FF55;">Yes</td></tr>
+  <tr><td><b>Color</b></td><td style="background-color:#55FF55;">Yes</td><td>String (Representing the CSS "background" property of the element)</td><td style="background-color:#FF5555;">No</td></tr>
+  <tr><td><b>TextColor</b></td><td style="background-color:#55FF55;">Yes</td><td>String (Representing the CSS "color" property of the element)</td><td style="background-color:#FF5555;">No</td></tr>
+  <tr><td><b>Equation</b></td><td style="background-color:#55FF55;">Yes</td><td>Array or String*</td><td style="background-color:#55FF55;">Yes</td></tr>
+</table>
+&ast;-Specifically, the string literal "none" , which means that the element becomes a "basic" element(the player starts off with it)
+
+#### Properties - Name
+The name of the element as a string. Note that this is a case-sensitive property(which means that "dna" is different from "DNA" and "dNa").
+
+
 
 #### Example 1 - Carbon Dioxide
 ```JavaScript
