@@ -23,7 +23,7 @@ elementObjN
 }
 ```
 
-where `elementObjN` is an object which represents the element itself.
+where `elementObjN` is an **object** which represents one unique element, and `"elements"` is the property of the `elements.json` file which contains all of the elements.
 
 ### ElementObject Structure
 The structure of the Element Object is as follows:
