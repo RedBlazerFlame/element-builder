@@ -177,10 +177,62 @@ Notice that this might take some time to type. Luckily, there is a way to **repe
 
 The syntax for that is:
 ```JavaScript
-[elementName,repeatCount]
+[elementName/elementGroup,repeatCount]
+```
+Which basically represents ```repeatCount``` copies of ```elementName/elementGroup```
+
+So, in ```"equation":[["silicon",["oxygen",2]]]```, the element is made by combining 1 copy of silicon and 2 copies of oxygen.
+
+In our previous example, the element can be simplified in this way:
+```JavaScript
+{
+            "name":"ocean",
+            "type":"mixture",
+            "equation":[
+                [["saltwater",8]] //8 copies of "saltwater"
+            ]
+        }
 ```
 
-So, in ```"equation":[["silicon",["oxygen",2]]]```, the element is made by combining 1 copy of silicon and two copies of oxygen.
+Basically, the way this works is that ```combine.js``` checks to see if an item is of the format ```[Value(string or array), Number]```, and converts that to an array containing ```Number``` copies of ```Value```. In the final step, ```combine.js``` **flattens** the array, so that it only contains strings representing the names of the elements.
+
+Notice that ```Value``` can be a STRING or ARRAY. This means that you can **nest repetitions**. Consider an element made by the following chemical formula: 10H<sub>2</sub>O + CO<sub>2</sub>
+
+Then, that element's equation can be represented as:
+```JavaScript
+"equation":[
+
+[
+[[["hydrogen",2],"oxygen"],10],
+"carbon",["oxygen",2]
+]
+
+]
+```
+Notice that there are two parts: ```[[["hydrogen",2],"oxygen"],10]``` and ```"carbon",["oxygen",2]```. The latter simply represents CO<sub>2</sub>; meanwhile, the former(```[[["hydrogen",2],"oxygen"],10]```) represents 10 copies of ```[["hydrogen",2],"oxygen"]```, which is 10H<sub>2</sub>O, or 20 pieces of hydrogen(because 10&ast;2=20) and 10 pieces of oxygen.
+
+Here are some more examples:
+1. O<sub>2</sub> -> `[["oxygen",2]]`
+1. KO<sub>2</sub> -> `["potassium",["oxygen",2]]`
+1. 2NaCl -> `[[["sodium","chlorine"],2]]`
+1. 2SiO<sub>2</sub> -> `[[["silicon",["oxygen",2]],2]]`
+1. 2SiO<sub>2</sub> + CO<sub>2</sub> + KO<sub>2</sub> -> `[[["silicon",["oxygen",2]],2] , "carbon",["oxygen",2] , "potassium",["oxygen",2]]`
+
+##### "equation" Property Special Case
+There is one special case for the `"equation"` property, which is `"equation":"none"`.
+
+Notice that instead of containing an array of equation arrays, it instead contains the string literal `"none"`.
+Whenever the `"equation"` property is set as `"none"` , this means that the element is basic(you start of with it, and there is no way to make the element).
+
+Consider the following example:
+```JavaScript
+            {
+              "name":"hydrogen",
+              "type":"element",
+              "equation":"none" //Basic Element!
+            }
+```
+As you can see, `"hydrogen"`'s equation property is set to `"none"`. This means that you start the game having the `"hydrogen"` element.
 
 #### Example 1 - Carbon Dioxide
 ```JavaScript
