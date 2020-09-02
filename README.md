@@ -222,7 +222,7 @@ Here are some more examples:
 There is one special case for the `"equation"` property, which is `"equation":"none"`.
 
 Notice that instead of containing an array of equation arrays, it instead contains the string literal `"none"`.
-Whenever the `"equation"` property is set as `"none"` , this means that the element is basic(you start of with it, and there is no way to make the element).
+Whenever the `"equation"` property is set as `"none"` , this means that the element is basic(you start off with it, and there is no way to make the element).
 
 Consider the following example:
 ```JavaScript
