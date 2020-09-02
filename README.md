@@ -105,6 +105,83 @@ It **CANNOT** be a:
 * `"textColor":"red" //Red Text`
 * `"textColor":"#FFAABB" //Pink Text`
 
+#### Properties - equation
+Basically, the equation property tells the `combine.js` file on how to make the element. To be specific, the equation property is an **array of arrays**, containing all the possible ways to make an element (There is a special case where it can be a **string**, to be explained in a later section). For example, in `"equation":[["sodium","chlorine"],["pizza","pepperoni"]]`, the element can be made by either combining sodium and chlorine OR by combining pizza and pepperoni. It should be noted that the order in which things appear in the equation array **does not matter**, meaning that it is commutative (i.e.,  `"equation":[["hydrogen","oxygen"]]` and `"equation":[["oxygen","hydrogen"]]` both represent the same thing).
+
+##### Structure of the "equation" Property
+The equation property takes on the following format:
+```JavaScript
+"equation":[
+equation(1),
+equation(2),
+equation(3),
+.
+.
+.
+equation(N-1),
+equation(N)
+]
+```
+
+Where ```equation(N)``` represents an equation (which is represented as an array of elements). If one of ```equation(1), equation(2), equation(3), ..., equation(N-1), equation(N)``` matches with the user input, then combinations.js returns the object name, object type, object color, and object textColor and converts those to object instances of the class Element (the logic for the Element class is stored in the ```elements.js``` file), which the JavaScript can handle.
+
+##### Structure of the Equations Inside the "equation" Property
+The "equation" property is an **array** of equations. Each equation is, itself, an array containing the elements used to make the new element. The format of the equations in the equation property is as follows:
+```
+"equation":[
+[element/elementGroup1,element/elementGroup2,element/elementGroup3,...,element/elementGroupN]
+]
+```
+
+An element is basically a string containing the name of the element to be used as a part of the equation.
+A simple example would be saltwater. Consider the following object:
+```JavaScript
+{
+            "name":"saltwater",
+            "type":"mixture",
+            "equation":[
+                ["salt","water"]
+            ]
+        }
+```
+
+This element has the name "saltwater", is of the type "mixture", and is made by combining "salt" and "water".
+
+Now, we can use "saltwater" to make new elements. Consider this arbitrarily chosen new element:
+```JavaScript
+{
+            "name":"sea",
+            "type":"mixture",
+            "equation":[
+                ["saltwater","saltwater"]
+            ]
+        }
+```
+
+This new element has the name "sea", is of the type "mixture", and is made by combining our previously created "saltwater" element to itself.
+
+We can add as many "saltwater" elements as we like, as seen in:
+```JavaScript
+{
+            "name":"ocean",
+            "type":"mixture",
+            "equation":[
+                ["saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater","saltwater"]
+            ]
+        }
+```
+
+This new element has the name "ocean", is of the type "mixture", and is made by combining 8 copies of "saltwater".
+
+Notice that this might take some time to type. Luckily, there is a way to **repeat** elements or groups of elements a certain number of times.
+
+The syntax for that is:
+```JavaScript
+[elementName,repeatCount]
+```
+
+So, in ```"equation":[["silicon",["oxygen",2]]]```, the element is made by combining 1 copy of silicon and two copies of oxygen.
+
 #### Example 1 - Carbon Dioxide
 ```JavaScript
             {
