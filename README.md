@@ -10,7 +10,7 @@ A game built on HTML, CSS, and JavaScript where you start with the elements in t
 This project was started by RedBlazerFlame. RedBlazerFlame needed to study chemistry in a way that is fun for them, so RedBlazerFlame decided to make element-builder. It's written in HTML, CSS, and JavaScript (because RedBlazerFlame has the most experience there).
 
 ## Documentation
-Basically, there is an `elements.json` file, which stores all the elements (where element refers to "elements","compounds", and "mixtures") and their properties and blueprint(the equation used to make it). Elements.json is **Case-Sensitive**, which includes the element names and the element types.
+Basically, there is an [elements.json](docs/combinations/elements.json) file, which stores all the elements (where element refers to "elements","compounds", and "mixtures") and their properties and blueprint(the equation used to make it). Elements.json is **Case-Sensitive**, which includes the element names and the element types.
 
 ### Elements.json Structure
 The structure of the `elements.json` is as follows:
