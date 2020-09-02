@@ -147,7 +147,7 @@
         {
             "name":"water",
             "type":"compound",
-            "color":"linear-gradient(30deg,#55AAFF,#003388)",
+            "color":"url('resources/flowing-water1.gif')",
             "textColor":"white",
             "equation":[
                 ["hydrogen","hydrogen","oxygen"]
@@ -205,8 +205,8 @@
         {
             "name":"ruby",
             "type":"compound",
-            "color":"linear-gradient(45deg,#FF5555,#880000)",
-            "textColor":"black",
+            "color":" url('resources/ruby1.png') no-repeat center, linear-gradient(135deg, #FF5555, #220000)",
+            "textColor":"rgba(255,255,255,0.7)",
             "equation":[
                 [["aluminium",2],["oxygen",3],"chromium"],["aluminium oxide","chromium"]
             ]
