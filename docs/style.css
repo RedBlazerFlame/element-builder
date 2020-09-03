@@ -159,11 +159,11 @@ main.equationControl>button.reset#reset{
     color:white;
 }
 
-main:not(.equation):not(.equationControl):hover{
+/*main:not(.equation):not(.equationControl):hover{
     padding:1vw;
     height:100vh;
     overflow:auto;
     margin:0;
     z-index:9999;
     transition:height 0.25s ease-in-out;
-}
+}*/

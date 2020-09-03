@@ -661,6 +661,35 @@
         },
 
         {
+            "name":"glycerol",
+            "type":"compound",
+            "color":"linear-gradient(45deg,#FFFFFF,#AAFFFF)",
+            "textColor":"black",
+            "equation":[
+                [["carbon",3],["hydrogen",8],["oxygen",3]]
+            ]
+        },
+        {
+            "name":"triglyceride",
+            "type":"compound",
+            "color":"linear-gradient(45deg,hsl(0,50%,100%),hsl(90,50%,75%),hsl(180,50%,50%),hsl(270,50%,25%),hsl(360,50%,0%))",
+            "textColor":"white",
+            "equation":[
+                ["glycerol",["fatty acid",3]]
+            ]
+        },
+        {
+            "name":"lipid",
+            "type":"compound",
+            "color":"linear-gradient(45deg,#FFAAFF 0%, #FFAAFF 50%, #AA55AA 50%, #AA55AA 100%)",
+            "textColor":"white",
+            "equation":[
+                ["glycerol",["fatty acid",3]],
+                ["unsaturated fatty acid","saturated fatty acid"]
+            ]
+        },
+
+        {
             "name":"ammonia",
             "type":"compound",
             "color":"linear-gradient(135deg,#FFFFEE,#FFFFAA)",
