@@ -26,8 +26,8 @@ getBasic().then(result=>{
     //Get a copy of all the elements
     allElements=elementCombinations;
     //if(prompt("Hello")=="World"){
-        elementsOwned=allElements.map(item=>new Element(item.name,item.type,item.color,item.textColor));
-        localStorage.setItem("progress",JSON.stringify(elementsOwned));
+        //elementsOwned=allElements.map(item=>new Element(item.name,item.type,item.color,item.textColor));
+        //localStorage.setItem("progress",JSON.stringify(elementsOwned));
     //}
     })
 //Clears the Equation Box
