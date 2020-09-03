@@ -48,9 +48,9 @@ The five properties can be summarized as follows:
   <tr><td><b>Type</b></td><td style="background-color:#55FF55;">Yes</td><td>String</td><td style="background-color:#55FF55;">Yes</td></tr>
   <tr><td><b>Color</b></td><td style="background-color:#55FF55;">Yes</td><td>String (Representing the CSS "background" property of the element)</td><td style="background-color:#FF5555;">No</td></tr>
   <tr><td><b>TextColor</b></td><td style="background-color:#55FF55;">Yes</td><td>String (Representing the CSS "color" property of the element)</td><td style="background-color:#FF5555;">No</td></tr>
-  <tr><td><b>Equation</b></td><td style="background-color:#55FF55;">Yes</td><td>Array or String*</td><td style="background-color:#55FF55;">Yes</td></tr>
+  <tr><td><b>Equation</b></td><td style="background-color:#55FF55;">Yes</td><td>Array or String&ast;</td><td style="background-color:#55FF55;">Yes</td></tr>
 </table>
-&ast;-Specifically, the string literal "none" , which means that the element becomes a "basic" element(the player starts off with it). **Setting the equation property to "none" will make it a basic element (An element which you start with)** .
+&ast;-Specifically, the string literal "none" , which means that the element becomes a "basic" element(the player starts off with it). <b>Setting the equation property to "none" will make it a basic element (An element which you start with)</b>.
 
 #### Properties - name
 The name of the element as a string. Note that this is a case-sensitive property(which means that "dna" is different from "DNA" and "dNa"). This is **required**.
