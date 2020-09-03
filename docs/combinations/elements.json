@@ -30,7 +30,7 @@
             "name":"boron",
             "type":"element",
             "color":"#884400",
-            "textColor":"black",
+            "textColor":"white",
             "equation":"none"
         },
         {
@@ -76,6 +76,8 @@
         {
             "name":"magnesium",
             "type":"element",
+            "color":"linear-gradient(135deg,#00AAFF,#333333)",
+            "textColor":"white",
             "equation":"none"
         },
         {
@@ -144,6 +146,49 @@
             "textColor":"black",
             "equation":"none"
         },
+        {
+            "name":"manganese",
+            "type":"element",
+            "color":"linear-gradient(70deg,#FFFF55,#AAAA00)",
+            "textColor":"black",
+            "equation":"none"
+        },
+        {
+            "name":"iron",
+            "type":"element",
+            "color":"linear-gradient(170deg, #DDCCCC, #888888)",
+            "textColor":"black",
+            "equation":"none"
+        },
+        {
+            "name":"cobalt",
+            "type":"element",
+            "color":"linear-gradient(135deg, #000088, #222266)",
+            "textColor":"white",
+            "equation":"none"
+        },
+        {
+            "name":"nickel",
+            "type":"element",
+            "color":"linear-gradient(90deg, #CCCCCC, #888888)",
+            "textColor":"black",
+            "equation":"none"
+        },
+        {
+            "name":"copper",
+            "type":"element",
+            "color":"linear-gradient(135deg, #884400, #221100)",
+            "textColor":"white",
+            "equation":"none"
+        },
+        {
+            "name":"zinc",
+            "type":"element",
+            "color":"linear-gradient(45deg, #FFFF00,#FF8800)",
+            "textColor":"black",
+            "equation":"none"
+        },
+
         {
             "name":"water",
             "type":"compound",
@@ -596,10 +641,39 @@
                 [ ["carbon",2],["hydrogen",4],["methylene",5] , ["carbon",2],["hydrogen",2],["oxygen",2],["methylene",9] ]
             ]
         },
+        {
+            "name":"unsaturated fatty acid",
+            "type":"compound",
+            "color":"linear-gradient(90deg,hsla(0,50%,25%,1),hsla(40,50%,25%,1),hsla(80,50%,25%,1),hsla(120,50%,25%,1),hsla(160,50%,25%,1),hsla(200,50%,25%,1),hsla(240,50%,25%,1),hsla(280,50%,25%,1),hsla(320,50%,25%,1),hsla(360,50%,25%,1))",
+            "textColor":"rgba(255,255,255,0.75)",
+            "equation":[
+                ["myristoleic acid","palmitoleic acid","sapienic acid","oleic acid","elaidic acid","vaccenic acid"]
+            ]
+        },
+        {
+            "name":"fatty acid",
+            "type":"compound",
+            "color":"linear-gradient(90deg,hsla(0,50%,50%,1),hsla(40,50%,50%,1),hsla(80,50%,50%,1),hsla(120,50%,50%,1),hsla(160,50%,50%,1),hsla(200,50%,50%,1),hsla(240,50%,50%,1),hsla(280,50%,50%,1),hsla(320,50%,50%,1),hsla(360,50%,50%,1))",
+            "textColor":"rgba(255,255,255,0.75)",
+            "equation":[
+                ["unsaturated fatty acid","saturated fatty acid"]
+            ]
+        },
+
+        {
+            "name":"ammonia",
+            "type":"compound",
+            "color":"linear-gradient(135deg,#FFFFEE,#FFFFAA)",
+            "equation":[
+                ["nitrogen",["hydrogen",3]]
+            ]
+        },
 
         {
             "name":"saltwater",
             "type":"mixture",
+            "color":"url('resources/flowing-water1.gif'), rgba(255,255,255,0.5)",
+            "textColor":"white",
             "equation":[
                 ["salt","water"]
             ]

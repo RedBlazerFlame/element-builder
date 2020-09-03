@@ -28,9 +28,10 @@ body{
 }
 main{
     width:95%;
+    display:block;
     padding:1vw;
     overflow:auto;
-    transition:filter 0.25s linear;
+    transition:filter 0.25s linear, height 0.25s ease-in-out;
 }
 main:not(.equation):not(:hover){
     filter:brightness(100%) saturate(0%) blur(0.1vw);
@@ -39,11 +40,12 @@ main:not(.equation):not(:hover){
 main:not(.equation):hover{
     filter:brightness(110%) saturate(100%);
 }
+
 main>div.element{
     position:relative;
     display:inline-block;
-    min-width:1vw;
-    min-height:1vw;
+    min-width:5vw;
+    min-height:5vw;
     padding:1vw;
     margin:0.5vw;
     background-color:white;
@@ -58,7 +60,7 @@ main>div.element{
     font-weight:bold;
     text-transform: capitalize;
     transform:scale(1);
-    transition:transform 1s ease-in-out 0s,box-shadow 1s ease-in-out 0s;
+    transition:transform 1s ease-in-out 0s,box-shadow 1s ease-in-out 0s,filter 1s linear;
     box-shadow: 1vw 1vh 1vw black;
 }
 
@@ -96,6 +98,12 @@ main>div.element:hover{
     transform:scale(1.5) translateY(-1vh);
     z-index:900;
     box-shadow: 2vw 2vh 2vw black;
+    filter:saturate(200%) brightness(100%);
+    transition:filter 1s linear;
+}
+main>div.element:not(:hover){
+    filter:brightness(75%);
+    transition:filter 1s linear;
 }
 
 main.elements{
@@ -149,4 +157,13 @@ main>p.label{
 main.equationControl>button.reset#reset{
     background-color:red;
     color:white;
+}
+
+main:not(.equation):not(.equationControl):hover{
+    padding:1vw;
+    height:100vh;
+    overflow:auto;
+    margin:0;
+    z-index:9999;
+    transition:height 0.25s ease-in-out;
 }
